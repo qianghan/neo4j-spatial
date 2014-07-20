@@ -1,7 +1,7 @@
 neo4j-spatial
 =============
 
-*neo4j* 
+**neo4j-spatial** 
 
 Neo4j is a highly scalable, robust (fully ACID) native graph database. Neo4j is used in mission-critical apps by thousands of leading, startups, enterprises, and governments around the world.
 
@@ -11,7 +11,7 @@ Built on Neo4j 2.1.2 with spatial plugin.
 
 With the Dockerfile on repository you've a docker neo4j community edition image ready to go.
 
-*Setup*
+**Setup**
 
 Execute this command:
 

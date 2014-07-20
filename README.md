@@ -15,7 +15,7 @@ With the Dockerfile on repository you've a docker neo4j community edition image 
 
 Execute this command:
 
-docker run -i -t -d -privileged -p 7474:7474 tpires/neo4j
+docker run -i -t -d -privileged -p 7474:7474 johnclegg/neo4j-spatial
 
 Access to http://localhost:7474 with your browser.
 

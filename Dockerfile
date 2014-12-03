@@ -12,7 +12,7 @@ RUN wget -O - http://debian.neo4j.org/neotechnology.gpg.key | apt-key add -
 # Create an apt sources.list file
 RUN echo 'deb http://debian.neo4j.org/repo stable/' > /etc/apt/sources.list.d/neo4j.list
 # Find out about the files in neo4j repo ; install neo4j community edition
-RUN apt-get update ; apt-get install neo4j=2.1.2 -y
+RUN apt-get update ; apt-get install neo4j=2.1.6 -y
 
 ## add launcher and set execute property
 ADD launch.sh /
@@ -20,9 +20,9 @@ RUN chmod +x /launch.sh
 
 # Install neo4j spatial
 WORKDIR /tmp
-RUN wget -q "https://github.com/neo4j-contrib/m2/blob/master/releases/org/neo4j/neo4j-spatial/0.13-neo4j-2.1.2/neo4j-spatial-0.13-neo4j-2.1.2-server-plugin.zip?raw=true" -O neo4j-spatial-0.13-neo4j-2.1.2-server-plugin.zip
-RUN mv neo4j-spatial-0.13-neo4j-2.1.2-server-plugin.zip /var/lib/neo4j/plugins/
-RUN unzip /var/lib/neo4j/plugins/neo4j-spatial-0.13-neo4j-2.1.2-server-plugin.zip -d /var/lib/neo4j/plugins/
+RUN wget -q "https://github.com/neo4j-contrib/m2/blob/master/releases/org/neo4j/neo4j-spatial/0.13-neo4j-2.1.6/neo4j-spatial-0.13-neo4j-2.1.6-server-plugin.zip?raw=true" -O neo4j-spatial-0.13-neo4j-2.1.6-server-plugin.zip
+RUN mv neo4j-spatial-0.13-neo4j-2.1.6-server-plugin.zip /var/lib/neo4j/plugins/
+RUN unzip /var/lib/neo4j/plugins/neo4j-spatial-0.13-neo4j-2.1.6-server-plugin.zip -d /var/lib/neo4j/plugins/
 
 ## clean sources
 RUN apt-get clean
